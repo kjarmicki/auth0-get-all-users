@@ -1,0 +1,25 @@
+{
+  "name": "auth0-get-all-users",
+  "version": "1.0.0",
+  "description": "Helper for Auth0 API allowing to query unlimited amount of users",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:e2e": "node test/e2e.js"
+  },
+  "author": "Krystian Jarmicki",
+  "license": "MIT",
+  "devDependencies": {
+    "auth0": "2.16.0",
+    "dotenv": "7.0.0",
+    "jest": "24.7.1",
+    "rest-facade": "1.10.1",
+    "stream-mock": "2.0.2"
+  },
+  "dependencies": {
+    "download": "7.1.0",
+    "rimraf": "2.6.3",
+    "tmp-promise": "1.0.5"
+  }
+}
+
