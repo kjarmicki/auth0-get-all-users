@@ -1,6 +1,6 @@
 {
   "name": "auth0-get-all-users",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helper for Auth0 API allowing to query unlimited amount of users",
   "main": "src/index.js",
   "scripts": {
@@ -9,6 +9,16 @@
   },
   "author": "Krystian Jarmicki",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjarmicki/auth0-get-all-users"
+  },
+  "keywords": ["auth0"],
+  "dependencies": {
+    "download": "7.1.0",
+    "rimraf": "2.6.3",
+    "tmp-promise": "1.0.5"
+  },
   "devDependencies": {
     "auth0": "2.16.0",
     "dotenv": "7.0.0",
@@ -16,10 +26,8 @@
     "rest-facade": "1.10.1",
     "stream-mock": "2.0.2"
   },
-  "dependencies": {
-    "download": "7.1.0",
-    "rimraf": "2.6.3",
-    "tmp-promise": "1.0.5"
+  "peerDependencies": {
+    "auth0": ">=2.15.0"
   }
 }
 

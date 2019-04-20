@@ -16,7 +16,6 @@ module.exports = function createUnzip(zlib, fs) {
       readStream.pipe(gunzip);
       gunzip.pipe(writeStream);
       
-
       readStream.on('error', reject);
       gunzip.on('error', reject);
       writeStream.on('error', reject);
