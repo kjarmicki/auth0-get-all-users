@@ -1,6 +1,6 @@
 {
   "name": "auth0-get-all-users",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Helper for Auth0 API allowing to query unlimited amount of users",
   "main": "src/index.js",
   "scripts": {
@@ -13,7 +13,9 @@
     "type": "git",
     "url": "https://github.com/kjarmicki/auth0-get-all-users"
   },
-  "keywords": ["auth0"],
+  "keywords": [
+    "auth0"
+  ],
   "dependencies": {
     "download": "7.1.0",
     "rimraf": "2.6.3",
@@ -30,4 +32,3 @@
     "auth0": ">=2.15.0"
   }
 }
-
