@@ -58,7 +58,7 @@ describe('Export Job Manager', () => {
     });
 
     expect(retrievedLocation).toBe(location);
-    expect(auth0.jobs.get).toHaveBeenCalledTimes(6);
+    expect(auth0.jobs.get).toHaveBeenCalledTimes(5);
   });
 
   it('should fail after certian number of retries', async () => {

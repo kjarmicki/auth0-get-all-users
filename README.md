@@ -17,9 +17,19 @@ const auth0 = new ManagementClient({
   // initialize management client with your credentials
 });
 
-const allUsers = await getAllUsers(auth0).asArray(/* export job options */);
+const allUsers = await getAllUsers(auth0).asArray(/* export job options, manager options */);
 ```
-`asArray` options are the same as [user export job options](http://auth0.github.io/node-auth0/module-management.JobsManager.html#exportUsers).
+`asArray` takes two parameters, both are optional.
+
+First one contains options that are the same as [user export job options](http://auth0.github.io/node-auth0/module-management.JobsManager.html#exportUsers).
+
+Second one specifies export job manager behavior, specifically:
+```javascript
+{
+  checkInterval: number, // time in ms, specifies how often should we check in Auth0 if export job is completed, default is 1000
+  checkRetries: number // maximum amount of retries the aforementioned check is performed, default is 30
+}
+```
 
 ## How does it work?
 

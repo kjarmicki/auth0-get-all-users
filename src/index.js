@@ -19,8 +19,8 @@ module.exports = function getAllUsers(auth0) {
   const jsonParser = createJsonParser(fs);
   const cleanup = createCleanup(rimraf);
 
-  async function asArray(exportJobParams) {
-    const usersFileLocation = await exportJobManager.getFileToDownload(exportJobParams);
+  async function asArray(exportJobParams, managerParams) {
+    const usersFileLocation = await exportJobManager.getFileToDownload(exportJobParams, managerParams);
     const downloadedFilePath = await downloader.download(usersFileLocation);
     const unzippedFilePath = await unzip(downloadedFilePath);
     const parsed = await jsonParser.parseAsArray(unzippedFilePath);
